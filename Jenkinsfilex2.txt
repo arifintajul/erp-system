@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/arifintajul/erp-system.git'
+            }
+        }
+        stage('Build') {
+            steps {
+                bat 'php -l **/*.php'  // Lint PHP Files
+            }
+        }
+        stage('Test') {
+            steps {
+                //bat './vendor/bin/phpunit tests/'  // Run Unit Tests
+				bat './vendor/bin/phpunit --log-junit junit.xml tests/'  // Run Unit Tests with JUnit log
+
+            }
+        }
+    }
+    post {
+        always {
+            // Publish hasil pengujian jika diperlukan
+            junit 'junit.xml'  // Sesuaikan jika menggunakan log JUnit
+        }
+    }
+}

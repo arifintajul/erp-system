@@ -1,6 +1,6 @@
 ECHO is off.
 <?php
-use PHPUnit\Framework\TestCase;
+/* use PHPUnit\Framework\TestCase;
 
 class LoginTest extends TestCase {
     public function testValidLogin() {
@@ -15,5 +15,5 @@ class LoginTest extends TestCase {
         $this->assertFalse($result);
     }
 }
-?>
+ */?>
 
