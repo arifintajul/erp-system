@@ -1,1 +1,1 @@
-{"version":1,"defects":{"LoginTest::testValidLogin":8,"LoginTest::testInvalidLogin":8},"times":{"LoginTest::testValidLogin":0.068,"LoginTest::testInvalidLogin":0.001}}
+{"version":1,"defects":[],"times":{"Tests\\CustomerTest::testTrue":0.007}}
