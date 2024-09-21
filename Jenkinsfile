@@ -2,14 +2,12 @@ pipeline {
     agent any
 
     stages {
-		stage('Sync Files') {
-            steps {
-                bat 'xcopy "C:\\xampp81\\htdocs\\erp\\*" "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\erp-system2\\" /E /I /Y'
-            }
-        }
          stage('Checkout') {
             steps {
-                git 'https://github.com/arifintajul/erp-system.git'
+				dir('C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\erp-system2') {
+					git 'https://github.com/arifintajul/erp-system.git'
+				}
+                 
             }
         }
  		
