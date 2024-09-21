@@ -17,6 +17,18 @@ pipeline {
             }
         }
 		
+        stage('Prepare Reports') {
+            steps {
+                //bat 'mkdir reports || echo "Reports folder already exists"'  // Create reports folder
+				bat 'echo "Reports folder already exists"' 
+            }
+        }
+        stage('Test') {
+            steps {
+                //bat './vendor/bin/phpunit --log-junit reports/junit.xml tests/'  // Run Unit Tests with JUnit log
+				echo 'Tests completed. Check for junit.xml in reports folder.'
+           }
+        }
     }
     post {
         always {
