@@ -4,7 +4,8 @@ pipeline {
     stages {
          stage('Checkout') {
             steps {
-					git 'https://github.com/arifintajul/erp-system.git'
+                deleteDir()  // Menghapus isi workspace
+                git url: 'https://github.com/arifintajul/erp-system.git', branch: 'main'
                  
             }
         }
