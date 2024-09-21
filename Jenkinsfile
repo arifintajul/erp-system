@@ -7,19 +7,12 @@ pipeline {
                 bat 'xcopy "C:\\xampp81\\htdocs\\erp\\*" "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\erp-system2\\" /E /I /Y'
             }
         }
-         stage('Checkout1') {
+         stage('Checkout') {
             steps {
-                //git 'https://github.com/arifintajul/erp-system.git'
+                git 'https://github.com/arifintajul/erp-system.git'
             }
         }
-       stage('Checkout') {
-            steps {
-                dir('C:\\xampp81\\htdocs\\erp') { // Set working directory to your project folder
-                    git 'https://github.com/arifintajul/erp-system.git'
-                }
-            }
-        }
-		
+ 		
         stage('Build') {
             steps {
                 bat 'php -l **/*.php'  // Lint PHP Files
