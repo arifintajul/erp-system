@@ -1,5 +1,10 @@
+
 @echo off
 for /R %%f in (*.php) do (
-    php -l "%%f"
+    echo %%f | findstr /I "\\vendor\\" >nul
+    if errorlevel 1 (
+        php -l "%%f"
+    )
 )
-pause
+
+rem pause
