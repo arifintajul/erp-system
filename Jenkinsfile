@@ -4,9 +4,7 @@ pipeline {
     stages {
          stage('Checkout') {
             steps {
-				dir('C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\erp-system2') {
 					git 'https://github.com/arifintajul/erp-system.git'
-				}
                  
             }
         }
