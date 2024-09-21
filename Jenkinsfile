@@ -10,15 +10,12 @@ pipeline {
             }
         }
  		
-        stage('Build') {
+        stage('Lint PHP Files') {
             steps {
-				bat '''
-				for /R %f in (*.php) do (
-					php -l "%f"
-				)
-				'''
+                bat 'for /R %f in (*.php) do (php -l "%f")'
             }
         }
+		
         stage('Prepare Reports') {
             steps {
                 bat 'mkdir reports || echo "Reports folder already exists"'  // Create reports folder
