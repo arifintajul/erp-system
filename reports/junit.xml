@@ -3,16 +3,8 @@
   <testsuite name="CLI Arguments" tests="2" assertions="0" errors="2" failures="0" skipped="0" time="0.070799">
     <testsuite name="LoginTest" file="C:\xampp81\htdocs\erp\tests\LoginTest.php" tests="2" assertions="0" errors="2" failures="0" skipped="0" time="0.070799">
       <testcase name="testValidLogin" file="C:\xampp81\htdocs\erp\tests\LoginTest.php" line="6" class="LoginTest" classname="LoginTest" assertions="0" time="0.069532">
-        <error type="Error">LoginTest::testValidLogin&#13;
-Error: Class "LoginController" not found
-&#13;
-C:\xampp81\htdocs\erp\tests\LoginTest.php:7</error>
       </testcase>
       <testcase name="testInvalidLogin" file="C:\xampp81\htdocs\erp\tests\LoginTest.php" line="12" class="LoginTest" classname="LoginTest" assertions="0" time="0.001267">
-        <error type="Error">LoginTest::testInvalidLogin&#13;
-Error: Class "LoginController" not found
-&#13;
-C:\xampp81\htdocs\erp\tests\LoginTest.php:13</error>
       </testcase>
     </testsuite>
   </testsuite>
