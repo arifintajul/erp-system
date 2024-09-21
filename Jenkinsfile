@@ -19,7 +19,8 @@ pipeline {
 		
         stage('Prepare Reports') {
             steps {
-                bat 'mkdir reports || echo "Reports folder already exists"'  // Create reports folder
+                //bat 'mkdir reports || echo "Reports folder already exists"'  // Create reports folder
+				bat 'echo "Reports folder already exists"' 
             }
         }
         stage('Test') {
