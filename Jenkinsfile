@@ -12,7 +12,11 @@ pipeline {
  		
         stage('Build') {
             steps {
-                bat 'php -l **/*.php'  // Lint PHP Files
+				bat '''
+				for /R %f in (*.php) do (
+					php -l "%f"
+				)
+				'''
             }
         }
         stage('Prepare Reports') {
